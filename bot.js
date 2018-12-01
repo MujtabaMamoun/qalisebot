@@ -907,7 +907,7 @@ message.channel.send(`**Done || ${user.tag} Banned . :ballot_box_with_check: **`
  .setColor("RANDOM")
  .setThumbnail(client.user.avatarURL)
 .setTitle('Click Here .')
-.setURL('https://discordapp.com/oauth2/authorize?client_id=477008338048253983&permissions=8&scope=bot')
+.setURL('https://discordapp.com/api/oauth2/authorize?client_id=518528954731331594&permissions=0&scope=bot')
   message.channel.sendEmbed(embed);
    }
 }); 
