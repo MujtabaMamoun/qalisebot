@@ -2,17 +2,17 @@ const Discord = require('discord.js');
 const moment = require("moment");
 const fs = require("fs");
 const client = new Discord.Client();
- const prefix = "-";
+ const prefix = "&";
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
 client.on('ready', () => {
-    client.user.setActivity("-help || -inv ",{type: 'PLAYING'})
+    client.user.setActivity("&help || &inv ",{type: 'PLAYING'})
 
 });
 
-var editedyaklaab = "-";
+var editedyaklaab = "&";
 client.on('message', edddiiiittteeeddd => {
  
   if (edddiiiittteeeddd.content ===  editedyaklaab + 'colors'){
@@ -46,7 +46,7 @@ client.on('message', async message => {
             ch.setParent(cg)
              message.channel.send('**Done || Temporary Rooms Has Been Activated . :ballot_box_with_check: **')
               client.on('message' , message => {
-               if(message.content === '-temp off') {
+               if(message.content === '&temp off') {
                 if(!message.member.hasPermission(`MANAGE_GUILD`)) return;
                  cg.delete()
                   ch.delete()
@@ -169,7 +169,7 @@ client.on('message',async message => {
       //if(level[author.id].level < 10) return message.channel.send('**# يجب أن يكون لديك 10 مستويات لعمل كلان , لتجميع مستويات تفاعل بالشات وسيتم حساب النقاط**');
       if(system[author.id].clan !== 'None') return message.channel.send('**# يجب عليك ان تخرج من الكلان الذي أنت به حاليا**');
 
-      let m = await message.channel.send('**# أكتب أسم الكلان الان**');
+      let m = await message.channel.send('**# اكتب اسم الكلان الي تبيه الحين**');
       let awaited = await message.channel.awaitMessages(r => r.author.id === message.author.id, { max: 1, time: 20000, errors: ['time']}).then(collected => {
         if(collected.first().content.length > 25) return message.channel.send("**# لا يمكنك وضع اسم للكلان يفوق الـ25 حرفا , أعد كابة الأمر**");
         if(collected.first().content.includes("None")) return message.channel.send("**# `None`, لا يمكنك وضع هذه الكلمة كأسم للكلان**");
@@ -907,7 +907,7 @@ message.channel.send(`**Done || ${user.tag} Banned . :ballot_box_with_check: **`
  .setColor("RANDOM")
  .setThumbnail(client.user.avatarURL)
 .setTitle('Click Here .')
-.setURL('https://discordapp.com/oauth2/authorize?client_id=477008338048253983&permissions=8&scope=bot')
+.setURL('https://discordapp.com/api/oauth2/authorize?client_id=518528954731331594&permissions=0&scope=bot')
   message.channel.sendEmbed(embed);
    }
 }); 
