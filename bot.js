@@ -674,8 +674,10 @@ client.on('message', message => {
                 .setFooter(message.author.username, message.author.avatarURL)
                  .addField('- KSA. :flag_sa: ',
                 ""+ hours2 + ":" + minutes +":"+ seconds  + "")
-                .addField('- EGY. :flag_eg: ',
-                ""+ hours3 + ":" + minutes +":"+ seconds  + "")
+		.addField('- UAE. :flag_ae: ',
+	        ""+ hours3 + ":" + minutes +":"+ seconds  + "")
+		.addField('- OM. :flag_om: ',
+	        ""+ hours4 + ":" + minutes +":"+ seconds  + "")
 
                 .addField('- Date.',
                 ""+ Day + "-" + Month + "-" + Year +  "")
